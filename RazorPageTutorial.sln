@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorPageTutorial", "RazorPageTutorial\RazorPageTutorial.csproj", "{4130DEF4-524B-4005-95CA-3DF11B58D38C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorPagesTutorial.Models", "RazorPagesTutorial.Models\RazorPagesTutorial.Models.csproj", "{BC27AC48-F8B8-4D74-B3A2-8E28FF778F74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorPagesTutorial.Models", "RazorPagesTutorial.Models\RazorPagesTutorial.Models.csproj", "{BC27AC48-F8B8-4D74-B3A2-8E28FF778F74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorPagesTutorial.Services", "RazorPagesTutorial.Services\RazorPagesTutorial.Services.csproj", "{D732734E-BEA3-462F-BF55-77212FA6BBD8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorPagesTutorial.Services", "RazorPagesTutorial.Services\RazorPagesTutorial.Services.csproj", "{D732734E-BEA3-462F-BF55-77212FA6BBD8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorPagesTutorial", "RazorPageTutorial\RazorPagesTutorial.csproj", "{F58558AD-3F63-42FD-A714-626A38F7EB6F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4130DEF4-524B-4005-95CA-3DF11B58D38C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4130DEF4-524B-4005-95CA-3DF11B58D38C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4130DEF4-524B-4005-95CA-3DF11B58D38C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4130DEF4-524B-4005-95CA-3DF11B58D38C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BC27AC48-F8B8-4D74-B3A2-8E28FF778F74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BC27AC48-F8B8-4D74-B3A2-8E28FF778F74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC27AC48-F8B8-4D74-B3A2-8E28FF778F74}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -27,6 +23,10 @@ Global
 		{D732734E-BEA3-462F-BF55-77212FA6BBD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D732734E-BEA3-462F-BF55-77212FA6BBD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D732734E-BEA3-462F-BF55-77212FA6BBD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F58558AD-3F63-42FD-A714-626A38F7EB6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F58558AD-3F63-42FD-A714-626A38F7EB6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F58558AD-3F63-42FD-A714-626A38F7EB6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F58558AD-3F63-42FD-A714-626A38F7EB6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
