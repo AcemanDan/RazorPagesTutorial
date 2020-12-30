@@ -14,11 +14,11 @@ namespace RazorPagesTutorial.Services
             _employeeList = new List<Employee>()
             {
                 new Employee() { Id = 1, Name = "Mary", Department = Dept.HR,
-                    Email = "mary@pragimtech.com", PhotoPath="mary.png" },
+                    Email = "mary@pragimtech.com", PhotoPath="mary.jpg" },
                 new Employee() { Id = 2, Name = "John", Department = Dept.IT,
-                    Email = "john@pragimtech.com", PhotoPath="john.png" },
+                    Email = "john@pragimtech.com", PhotoPath="john.jpg" },
                 new Employee() { Id = 3, Name = "Sara", Department = Dept.IT,
-                    Email = "sara@pragimtech.com", PhotoPath="sara.png" },
+                    Email = "sara@pragimtech.com", PhotoPath="sara.jpg" },
                 new Employee() { Id = 4, Name = "David", Department = Dept.Payroll,
                     Email = "david@pragimtech.com" },
             };
