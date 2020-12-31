@@ -5,6 +5,15 @@
     var photoPath = "~/images/" + (Model.Employee.PhotoPath ?? "noimage.png");
 }
 
+@if (Model.Message != null)
+{
+    <div class="col-sm-8">
+        <div class="alert alert-primary">
+            @Model.Message
+        </div>
+    </div>
+}
+
 <div class="row justify-content-center m-3">
     <div class="col-sm-8">
         <div class="card">
@@ -17,7 +26,7 @@
                 <h4>Email: @Model.Employee.Email</h4>
                 <h4>Department: @Model.Employee.Department</h4>
             </div>
-            
+
         </div>
         <div class="card-footer text-center">
             <a asp-page="index" class="btn btn-primary">Back</a>

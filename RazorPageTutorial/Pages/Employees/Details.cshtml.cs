@@ -20,6 +20,9 @@ namespace RazorPagesTutorial.Pages.Employees
 
         public Employee Employee { get; private set; }
 
+        [TempData]
+        public string Message { get; set; }
+
         public IActionResult OnGet(int id)
         {
             Employee = employeeRepository.GetEmployee(id);
