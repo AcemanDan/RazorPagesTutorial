@@ -35,9 +35,16 @@ namespace RazorPagesTutorial.Pages.Employees
 
         public string Message { get; set; }
 
-        public IActionResult OnGet(int id)
+        public IActionResult OnGet(int? id)
         {
-            Employee = employeeRepository.GetEmployee(id);
+            if (id.HasValue)
+            {
+                Employee = employeeRepository.GetEmployee(id.Value);
+            }
+            else
+            {
+                Employee = new Employee();
+            }
 
             if (Employee == null)
             {
@@ -61,7 +68,16 @@ namespace RazorPagesTutorial.Pages.Employees
                     }
                     Employee.PhotoPath = ProcessUploadFile();
                 }
-                Employee = employeeRepository.Update(Employee);
+
+                if (Employee.Id > 0)
+                {
+                    Employee = employeeRepository.Update(Employee);
+                }
+                else
+                {
+                    Employee = employeeRepository.Add(Employee);
+                }
+                
                 return RedirectToPage("Index");
             }
             return Page();

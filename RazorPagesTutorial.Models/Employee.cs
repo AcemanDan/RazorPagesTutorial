@@ -8,14 +8,16 @@ namespace RazorPagesTutorial.Models
     public class Employee
     {
         public int Id { get; set; }
-        [Required, Range(2,20, ErrorMessage = "Name--at least two " +
-            "characters but no more than 20--is required.")]
+        [Required, MinLength(3, ErrorMessage = "Name must " +
+            "contain at least 3 characters")]
         public string Name { get; set; }
-        [Required, RegularExpression
-            (@"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$",
+        [Required]
+        [Display(Name = "Office Email")]
+        [RegularExpression(@"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$",
             ErrorMessage = "Invalid email format")]
         public string Email { get; set; }
         public string PhotoPath { get; set; }
+        [Required]
         public Dept? Department { get; set; }
     }
 }
