@@ -21,7 +21,7 @@ namespace RazorPagesTutorial.Services
                 new Employee() { Id = 3, Name = "Sara", Department = Dept.IT,
                     Email = "sara@pragimtech.com", PhotoPath="sara.jpg" },
                 new Employee() { Id = 4, Name = "David", Department = Dept.Payroll,
-                    Email = "david@pragimtech.com" },
+                    Email = "david@pragimtech.com", PhotoPath="noimage.png" },
             };
         }
 
@@ -42,6 +42,16 @@ namespace RazorPagesTutorial.Services
             }
 
             return employeeToDelete;
+        }
+
+        public IEnumerable<DeptHeadCount> EmployeeCountByDept()
+        {
+            return _employeeList.GroupBy(e => e.Department)
+                .Select(g => new DeptHeadCount()
+                {
+                    Department = g.Key.Value,
+                    Count = g.Count()
+                }).ToList();
         }
 
         public IEnumerable<Employee> GetAllEmployees()
