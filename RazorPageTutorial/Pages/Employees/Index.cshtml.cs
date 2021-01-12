@@ -24,7 +24,7 @@ namespace RazorPageTutorial.Pages.Employees
         }
         public void OnGet()
         {
-            Employees = employeeRepository.GetAllEmployees();
+            //Employees = employeeRepository.GetAllEmployees();
             Employees = employeeRepository.Search(SearchTerm);
         }
     }
