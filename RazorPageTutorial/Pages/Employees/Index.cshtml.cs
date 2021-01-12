@@ -15,6 +15,9 @@ namespace RazorPageTutorial.Pages.Employees
 
         public IEnumerable<Employee> Employees { get; set; }
 
+        [BindProperty(SupportsGet = true)]
+        public string SearchTerm { get; set; }
+
         public IndexModel(IEmployeeRepository employeeRepository)
         {
             this.employeeRepository = employeeRepository;
@@ -22,6 +25,7 @@ namespace RazorPageTutorial.Pages.Employees
         public void OnGet()
         {
             Employees = employeeRepository.GetAllEmployees();
+            Employees = employeeRepository.Search(SearchTerm);
         }
     }
 }

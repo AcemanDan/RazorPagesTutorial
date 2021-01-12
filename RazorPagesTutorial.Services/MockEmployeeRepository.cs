@@ -72,6 +72,17 @@ namespace RazorPagesTutorial.Services
             return _employeeList.FirstOrDefault(e => e.Id == id);
         }
 
+        public IEnumerable<Employee> Search(string searchTerm)
+        {
+            if (string.IsNullOrEmpty(searchTerm))
+            {
+                return _employeeList;
+            }
+
+            return _employeeList.Where(e => e.Name.Contains(searchTerm) ||
+                                       e.Email.Contains(searchTerm)).ToList();
+        }
+
         public Employee Update(Employee updatedEmployee)
         {
             Employee employee = _employeeList
